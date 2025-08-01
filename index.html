@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main class="container">
+      <img
+        class="logo"
+        src="images/Google_2015_logo.svg.webp"
+        alt="Google logo"
+        width="272"
+        height="92"
+      />
+
+      <form class="search" action="/search" method="get">
+        <label class="sr-only" for="q">Search</label>
+        <input
+          id="q"
+          name="q"
+          class="search-input"
+          type="search"
+          placeholder="Search…"
+          autocomplete="off"
+        />
+
+        <div class="buttons">
+          <button type="submit">Google Search</button>
+          <button
+            type="button"
+            onclick="location.href='/lucky?q='+encodeURIComponent(document.getElementById('q').value)"
+          >
+            I'm Feeling Lucky
+          </button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
